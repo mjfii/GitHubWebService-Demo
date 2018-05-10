@@ -1,6 +1,11 @@
-import os
+import aiohttp
 
 from aiohttp import web
+
+from gidgethub import routing, sansio
+from gidgethub import aiohttp as gh_aiohttp
+
+router = routing.Router()
 
 async def main(request):
     return web.Response(status=200, text="Hello world!")
